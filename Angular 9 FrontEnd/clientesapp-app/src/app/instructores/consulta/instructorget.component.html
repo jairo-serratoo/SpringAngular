@@ -1,0 +1,37 @@
+<div class="container my-2">
+  <div class="my-2 text-center">
+    <button class="btn btn-primary btn-rounded" type="button" [routerLink]="['/instructorpost']"
+      routerLinkActive="router-link-active">Agregar Instructor</button>
+  </div>
+  <table class="table table-bordered table-dark table-hover">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido Paterno</th>
+        <th scope="col">Apellido Materno</th>
+        <th scope="col">Email</th>
+        <th scope="col">Telefono</th>
+        <th scope="col">Celular</th>
+        <th>Editar</th>
+        <th>Borrar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let instructor of instructor">
+        <td> {{ instructor.id }} </td>
+        <td> {{ instructor.nombre }} </td>
+        <td> {{ instructor.apellidoP }} </td>
+        <td> {{ instructor.apellidoM }} </td>
+        <td> {{ instructor.email }} </td>
+        <td> {{ instructor.numTel }} </td>
+        <td> {{ instructor.numCel }} </td>
+        <td>
+          <button type="button" name="button" [routerLink]="['/updateinstructor', instructor.id]" class="btn btn-primary"> Editar</button>
+        </td>
+        <td>
+          <button type="button" name="borrar" class="btn btn-danger" (click) = 'borrar(instructor)'>Borrar</button>
+        </td>
+      </tr>
+  </table>
+</div>

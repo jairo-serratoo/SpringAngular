@@ -1,0 +1,40 @@
+<div class="container table-responsive mt-5">
+
+    <!-- uso de como usar el enrutador internamente-->
+    <div class="my-2 text-center">
+        <button class="btn btn-primary btn-rounded" type="button" [routerLink]="['/agregarcliente']" routerLinkActive="router-link-active" >Agregar Cliente</button>
+    </div>
+
+    <table class="table table-bordered table-striped table-hover table-condensed">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>nombre</th>
+                <th>apellido paterno</th>
+                <th>apellido materno</th>
+                <th>email</th>
+                <th>telefono</th>
+                <th>celular</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let cliente of arregloClientes">
+                <td>{{cliente.id}}</td>
+                <td>{{cliente.nombre}}</td>
+                <td>{{cliente.apellidoP}}</td>
+                <td>{{cliente.apellidoM}}</td>
+                <td>{{cliente.email}}</td>
+                <td>{{cliente.numTel}}</td>
+                <td>{{cliente.numCel}}</td>
+                <td>
+                    <button type="button" name="editar" [routerLink]="['/agregarcliente', cliente.id]" class="btn btn-primary"> editar </button>
+                </td>
+                <td>
+                    <button type="button" name="borrar" class="btn btn-danger" (click) = 'borrar(cliente)'> borrar </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,67 @@
+<div>
+  <div class="row">
+    <div class="col-md-12">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="navbar-toggler-icon"></span>
+        </button> <a class="navbar-brand" href="#">{{title}}</a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+
+            <li class="nav-item active" routerLinkActive="active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active" routerLinkActive="active" >
+              <a class="nav-link" routerLink="cursos">Cursos</a>
+            </li>
+            <li class="nav-item active" routerLinkActive="active" >
+              <a class="nav-link" routerLink="clientes">Clientes</a>
+            </li>
+            <li class="nav-item active" routerLinkActive="active" >
+              <a class="nav-link" routerLink="materias">Materias</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown">Clientes</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" routerLink="clientes">Listar</a>
+                <a class="dropdown-item" routerLink="agregarcliente">Agregar</a> 
+                <a class="dropdown-item" href="#">Something else here</a>
+                <div class="dropdown-divider"></div> 
+                <a class="dropdown-item" href="#">Separated link</a>
+              </div>
+            </li>
+
+            <li class="nav-item dropdown" routerLinkActive="active">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown">Materias</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" routerLink="materias">Listar</a>
+                <a class="dropdown-item" routerLink="agregarmateria">Agregar</a> 
+                <a class="dropdown-item" href="#">Something else here</a>
+                <div class="dropdown-divider"></div> 
+                <a class="dropdown-item" href="#">Separated link</a>
+              </div>
+            </li>
+
+            <li class="nav-item dropdown" routerLinkActive="active">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown">Instructores</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" routerLink="instructorget">Listar</a>
+                <a class="dropdown-item" routerLink="instructorpost">Agregar</a> 
+                <a class="dropdown-item" href="#">Something else here</a>
+                <div class="dropdown-divider"></div> 
+                <a class="dropdown-item" href="#">Separated link</a>
+              </div>
+            </li>
+
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search"/>
+            <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>
