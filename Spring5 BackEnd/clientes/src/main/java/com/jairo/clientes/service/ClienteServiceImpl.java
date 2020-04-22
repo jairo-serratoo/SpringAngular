@@ -34,11 +34,10 @@ public class ClienteServiceImpl implements IClienteService {
 		return clienteDao.save(cliente);
 	}
 
-	@Override
-	public Cliente actualizarCliente(Long id, Cliente cliente) {
-		cliente.setId(id);
-		return clienteDao.save(cliente);
-	}
+	/*
+	 * @Override public Cliente actualizarCliente(Long id, Cliente cliente) {
+	 * cliente.setId(id); return clienteDao.save(cliente); }
+	 */
 
 	@Override
 	public void borrarCliente(Long id) {

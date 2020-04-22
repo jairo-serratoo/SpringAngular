@@ -29,11 +29,10 @@ public class InstructorServiceImpl implements IInstructorService {
 		return instructorDao.findById(id).orElse(null);
 	}
 
-	@Override
-	public Instructor actualizarInstructor(Long id, Instructor instructor) {
-		instructor.setId(id);
-		return instructorDao.save(instructor);
-	}
+	/*
+	 * @Override public Instructor actualizarInstructor(Long id, Instructor
+	 * instructor) { instructor.setId(id); return instructorDao.save(instructor); }
+	 */
 
 	@Override
 	public void borrarInstructor(Long id) {

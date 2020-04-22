@@ -3,7 +3,12 @@
     <div class="my-2 text-center">
         <button class="btn btn-primary btn-rounded" [routerLink]="['/agregarmateria']" routerLinkActive="router-link-active" >Agregar Materia</button>
     </div>
-    <table class="table table-bordered table-condensed table-striped table-hover">
+
+    <div class="alert alert-info" role="alert" *ngIf="arregloMateria?.length == 0">
+        No hay registros en la base de datos!
+    </div>
+    
+    <table class="table table-bordered table-condensed table-striped table-hover" *ngIf="arregloMateria?.length > 0">
         <thead>
             <tr>
                 <th>ID</th>

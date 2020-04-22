@@ -29,11 +29,10 @@ public class MateriaServiceImpl implements IMateriaService{
 		return materiaDao.findById(id).orElse(null);
 	}
 
-	@Override
-	public Materia actaulizarMateria(Long id, Materia materia) {
-		materia.setId(id);
-		return materiaDao.save(materia);
-	}
+	/*
+	 * @Override public Materia actaulizarMateria(Long id, Materia materia) {
+	 * materia.setId(id); return materiaDao.save(materia); }
+	 */
 
 	@Override
 	public void borrarMateria(Long id) {

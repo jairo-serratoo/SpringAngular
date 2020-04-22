@@ -10,7 +10,7 @@ public interface IClienteService {
 	public String nombreCompletoById(Long id);
 	public Cliente buscarPorId(Long id);
 	public Cliente agregarCliente(Cliente cliente);
-	public Cliente actualizarCliente(Long id, Cliente cliente);
+	//public Cliente actualizarCliente(Long id, Cliente cliente);
 	public void borrarCliente(Long id);
 	
 }

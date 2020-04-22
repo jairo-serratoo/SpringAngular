@@ -18,7 +18,7 @@ public class Cliente implements Serializable {
 	@Column(name = "id")
 	private Long id;
 
-	@Column(name = "nombre")
+	@Column(name = "nombre", nullable = false)
 	private String nombre;
 
 	@Column(name = "apellido_paterno")
@@ -27,7 +27,7 @@ public class Cliente implements Serializable {
 	@Column(name = "apellido_materno")
 	private String apellidoM;
 
-	@Column(name = "email")
+	@Column(name = "email", unique = true, nullable = false)
 	private String email;
 
 	@Column(name = "numero_telefono")

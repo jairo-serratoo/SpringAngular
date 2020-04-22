@@ -16,6 +16,7 @@ import { FormAgregarMateria } from './materias/agregar/form.materias.component';
 import { InstructorGetComponent } from './instructores/consulta/instructorget.component';
 import { InstructorService } from './instructores/instructor.service';
 import { AgregarInstructor } from './instructores/agregar/form.instructor.component';
+import { FooterComponent } from './footer/footer.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/cursos', pathMatch:'full'},
@@ -36,6 +37,7 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     HeaderComponent,
+    FooterComponent,
     ClientesComponent,
     CursosComponent,
     MateriaComponent,

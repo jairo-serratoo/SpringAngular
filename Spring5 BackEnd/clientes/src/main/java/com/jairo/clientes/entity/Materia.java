@@ -18,10 +18,10 @@ public class Materia implements Serializable{
 	@Column(name = "id")
 	private Long id;
 	
-	@Column(name = "nombre")
+	@Column(name = "nombre", nullable = false)
 	private String nombre;
 	
-	@Column(name = "descripcion")
+	@Column(name = "descripcion", nullable = false)
 	private String descripcion;
 
 	public Materia() { }

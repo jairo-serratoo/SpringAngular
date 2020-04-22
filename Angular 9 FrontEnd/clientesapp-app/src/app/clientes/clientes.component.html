@@ -5,7 +5,11 @@
         <button class="btn btn-primary btn-rounded" type="button" [routerLink]="['/agregarcliente']" routerLinkActive="router-link-active" >Agregar Cliente</button>
     </div>
 
-    <table class="table table-bordered table-striped table-hover table-condensed">
+    <div *ngIf="arregloClientes?.length == 0" class="alert alert-info">
+        No hay registros en la base de datos!
+    </div>
+
+    <table class="table table-bordered table-striped table-hover table-condensed" *ngIf="arregloClientes?.length > 0">
         <thead>
             <tr>
                 <th>id</th>

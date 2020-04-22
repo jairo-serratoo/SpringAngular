@@ -3,7 +3,12 @@
     <button class="btn btn-primary btn-rounded" type="button" [routerLink]="['/instructorpost']"
       routerLinkActive="router-link-active">Agregar Instructor</button>
   </div>
-  <table class="table table-bordered table-dark table-hover">
+
+  <div class="alert alert-info" role="alert" *ngIf="instructor?.length == 0">
+    No hay registros en la base de datos!
+  </div>
+
+  <table class="table table-bordered table-dark table-hover" *ngIf="instructor?.length > 0">
     <thead>
       <tr>
         <th scope="col">ID</th>
